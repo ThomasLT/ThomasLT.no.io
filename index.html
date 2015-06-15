@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Lightbox Demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<link href="css/normal.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
+	<link href="css/lightbox.css" rel="stylesheet" />
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<header>
+	<h1>Lightbox Demo</h1>
+</header>
+<section>
+	<div class="box fit"><h2>Start Here</h2><img src="img/arrow-right.png"/></div>
+	<div class="box"><a href="img/step-1.jpg" data-lightbox="Steps" data-title="Download Lightbox"><img src="img/step-1.jpg"/></a></div>
+	<div class="box"><a href="img/step-2.jpg" data-lightbox="Steps" data-title="Install Lightbox"><img src="img/step-2.jpg"/></a></div>
+</section>
 </body>
 </html>
+
+<script>
+var cw = $('.box').width();
+$('.box').css({'height':cw+'px'});
+</script>

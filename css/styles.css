@@ -1,0 +1,57 @@
+html {
+}
+.fit img, img {
+	width: 100%;
+	height: auto;
+}
+header {	
+	padding: 2%;
+	border-bottom: solid 5px #FAC7B6;
+	background: #F59676;
+	color: #fff;
+}
+header h1 {
+	max-width: 975px;
+	width: 75%;
+	margin: 0 auto;
+	font-size: 2;
+	letter-spacing: 10px;
+}
+section {
+	max-width: 975px;
+	width: 75%;
+	margin: 0 auto;
+	padding: 15px 5px;
+}
+.box:nth-child(2) {
+	counter-reset: steps;
+	}
+section .box {
+	float: left;
+	max-width: 20%;
+	min-width: 150px;
+	margin: 2.5%;
+	margin-top:45px;
+	counter-increment: steps;
+}
+.box h2{
+	margin-bottom: -10px;
+}
+.box::before {
+	content: counter(steps);
+	margin-top: -45px;
+	margin-left: -45px;
+	position: absolute;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	font-size:40px;
+	color:#fff;
+	line-height: 40px;
+	text-align:center;
+	background: #F59676;
+}
+.box:nth-child(1)::before {
+	content: "";
+	background: none;
+}
